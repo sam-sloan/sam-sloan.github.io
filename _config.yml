@@ -1,12 +1,11 @@
 # Site settings
-title: sam forderer 
+title: ALBION 
 email: samforderer@icloud.com 
 description: > # this means to ignore newlines until "baseurl:"
-  Sam Forderer | dev | design
+  ALBION web dev & design
+   
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: 
-github_username:  
+url: "http://al-bi-on.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
