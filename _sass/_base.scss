@@ -13,17 +13,7 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
-body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-}
-
-
+$spacing-unit: 12px;
 
  // Set `margin-bottom` to maintain vertical rhythm
 h1, h2, h3, h4, h5, h6,
@@ -46,8 +36,5 @@ figure > img {
     display: block;
 }
 
-figcaption {
-    font-size: $small-font-size;
-}
 
 
