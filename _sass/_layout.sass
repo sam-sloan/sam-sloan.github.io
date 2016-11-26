@@ -1,20 +1,39 @@
+body
+  background: -webkit-linear-gradient(white, #87DBCE)
+  height: 800px
+  background-repeat: no-repeat
 //grid settins
-$max-width: 960px
+$max-width: 1300px
 
 // container layout
 .app
   @include outer-container()
-
-  background: #30CEA1
-  box-shadow: 0 0 15px -4px
-
+  margin-top: 50px
+  height: 650px
+  padding: 20px
+  background: #404040
+  box-shadow: 0 0 40px -10px
   display: flex
-  justify-content: center
+  flex-flow: column
+  justify-content: space-around
+
 
 
 // logo
+  //added left margin
+
 .logo
-  width: 740px
+  width: 600px
   height: auto
-  max-width: 100% 
-// logo 
+  padding-top: 50px
+  max-width: 100%
+  margin-left: 340px
+
+// logo
+
+//arrow
+.arrow
+  width: 60px
+  height: auto
+  margin-top: 240px
+  align-self: center
