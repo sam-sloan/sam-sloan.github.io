@@ -1,0 +1,42 @@
+// Components
+
+
+// the title card under header
+.title
+  @include outer-container()
+  margin-top: 50px
+  height: 455px
+  background: $backgroundGrey
+  box-shadow: 0 0 60px -10px
+  border-radius: 6px
+  display: flex
+  justify-content: center
+
+  img
+    max-width: 600px
+
+// the about card
+.about
+  @include outer-container()
+  height: 120vH
+  min-height: 800px
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  background: $backgroundGrey
+  box-shadow: 0 0 40px -10px #000
+  border-radius: 6px
+  padding: 50px 100px 0px 100px
+  margin-top: 40px
+
+  p
+    font-size: 1.8em
+    font-family: 'roboto'
+    color: $paragraphGrey
+    line-height: 1.6
+
+    a
+      color: $paragraphGrey
+
+  .green-para
+    color: $albionTeal
