@@ -1,6 +1,5 @@
 body
-  background: -webkit-linear-gradient(white, #87DBCE)
-  height: 800px
+  background: #141414
   background-repeat: no-repeat
 //grid settins
 $max-width: 1300px
@@ -9,31 +8,104 @@ $max-width: 1300px
 .app
   @include outer-container()
   margin-top: 50px
-  height: 650px
+  height: 455px
+  width: 800px
   padding: 20px
-  background: #404040
+  background: #1D1D1D
   box-shadow: 0 0 40px -10px
+  border-radius: 6px
   display: flex
-  flex-flow: column
-  justify-content: space-around
+  justify-content: center
 
 
 
 // logo
-  //added left margin
 
 .logo
   width: 600px
   height: auto
-  padding-top: 50px
+  padding-top: 80px
   max-width: 100%
-  margin-left: 340px
+  margin: auto
 
-// logo
+//Used this div for easier alignment of nav and icon, at
+//least I think its easier..
+.navContainer
+  display: flex
+  width: 816px
+  height: 100px
+  background-color: transparent
+  margin: auto
 
-//arrow
-.arrow
-  width: 60px
+//Albion Icon
+.icon
+  height: 70px
+  width: 70px
+  margin-top: 40px
+  float: right
+
+.about
   height: auto
-  margin-top: 240px
-  align-self: center
+  width: 800px
+  background: #1D1D1D
+  box-shadow: 0 0 40px -10px
+  border-radius: 6px
+  margin: auto
+  margin-top: 35px
+  display: block
+  justify-content: center
+
+.about > p
+  text-align: left
+  font-size: 25px
+  font-family: Helvetica
+  font-weight: lighter
+  margin: auto
+  padding: 100px
+
+.form
+  height: 600px
+  width: 800px
+  background: -webkit-linear-gradient(rgba(0,175,138,0.3),rgba(0,175,138,0.1))
+  color: white
+  box-shadow: 0 0 40px -10px black
+  border-radius: 6px
+  margin: auto
+  margin-top: 35px
+  display: flex
+  justify-content: center
+
+form
+  margin:auto
+  margin-top: 70px
+  width: 600px
+  font-family: helvetica
+
+
+#project
+  height: 120px
+
+input
+  width: 100%
+  height: 50px
+  padding: 12px 20px
+  background-color: rgba(255,255,255,0.1)
+  border: none
+  margin: 8px 0
+  display: inline-block
+  box-sizing: border-box
+
+
+#submit
+  width: 100%
+  background-color: rgba(0,175,138,0.7)
+  color: white
+  padding: 14px 20px
+  margin: auto
+  margin-top: 20px
+  border: none
+  border-radius: 25px
+  cursor: pointer
+
+#submit:hover
+  background-color: rgba(0,175,138,1)

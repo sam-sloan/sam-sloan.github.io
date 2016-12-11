@@ -12,12 +12,46 @@
 		<!--[if lt IE 8]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
+		<div class = "navContainer">
+		{% include nav.html %}
+		<img src = "img/albionIcon.svg" class = "icon">
+		</div>
+
 		<div class = "app">
 			{{ content }}
-			<!-- added this arrow image indicator-->
-			<img src = 'img/Arrow.svg' alt = 'arrow' class = 'arrow'>
+
 
 		</div>
+
+		<div class="about">
+			<p><font color="#00AF8A">We’re Albion.</font><br><br><br><br>
+
+				<font color="white">We create beautiful digital products out of<u> Hamilton.</u><br><br>
+
+			  We’re a small team of designers and developers with super powers
+				and great taste. Albion is the name of the neighbourhood where we
+				grew up.<br><br><br><br><br>
+			  <font color="#00AF8A">But enough about us, let’s talk about you.</font>
+				 We’re dying to hear about
+			  your project.</p></font>
+
+		</div>
+
+		<section class="form">
+			<form>
+  		Your NAME:<br>
+  		<input type="text" name="name">
+  		<br><br>
+  		Email:<br>
+  		<input type="text" name="email"><br><br>
+			your project:<br>
+  		<input type="text" name="project" id="project">
+			<input type="submit" value="SUBMIT" id="submit">
+			</form>
+
+		</section>
+
+
 
 	</body>
 </html>
