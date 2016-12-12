@@ -1,31 +1,43 @@
-// Components
+// Styles for Major Components
+// Use a comment directly above each component with description
+// Use two spaces between each component
+// components can have multiple selectors, selectors are separated by one space
 
 
-// the title card under header
+// This is a div that covers entire page and saturates the background image with a transparent grey color.
+.transparency
+  width: 100%
+  height: 100%
+  background: rgba(20,20,20,0.85)
+  padding-top: 50px
+
+
+// The title card under header with large logo
 .title
   @include outer-container()
   margin-top: 50px
   height: 455px
   background: $backgroundGrey
   box-shadow: 0 0 60px -10px
-  border-radius: 6px
+  border-radius: $bRadius
   display: flex
   justify-content: center
 
   img
     max-width: 600px
 
-// the about card
+
+// The about card
 .about
   @include outer-container()
-  height: 120vH
-  min-height: 800px
+  height: 98vH
+  min-height: 600px
   display: flex
   flex-direction: column
   justify-content: space-around
   background: $backgroundGrey
   box-shadow: 0 0 40px -10px #000
-  border-radius: 6px
+  border-radius: $bRadius
   padding: 50px 100px 0px 100px
   margin-top: 40px
 
@@ -37,6 +49,58 @@
 
     a
       color: $paragraphGrey
-
+  // green-para selector is used for accent color within paragraph
   .green-para
     color: $albionTeal
+    font-family: 'roboto'
+
+
+// The contact form div
+.form
+  height: 120vH
+  @include outer-container()
+  background: -webkit-linear-gradient(rgba(45,45,45,0.22),rgba(23,190,155,0.1))
+  color: white
+
+  box-shadow: 0 0 40px -10px black
+  border-radius: $bRadius
+  padding-top: 100px
+  margin-top: 40px
+  display: flex
+  justify-content: center
+  margin-bottom: 60px
+
+  form
+    width: 600px
+    font-family: galder
+    letter-spacing: 3px
+  // styling of basic text boxes
+  input
+    height: 50px
+    padding: 12px 20px
+    box-sizing: content-box
+    width: 624px
+    background-color: rgba(255,255,255,0.1)
+    border: none
+    margin: 8px 0
+    display: inline-block
+    outline: none
+  //styles for the textarea
+  #project
+    background-color: rgba(255,255,255,0.1)
+    display: block
+    width: 600px
+    outline: none
+    border: none
+
+  // styles for the submit button
+  #submit
+    width: 100%
+    background-color: $albionTeal
+    color: white
+    margin: auto
+    margin-top: 20px
+    border: none
+    border-radius: 25px
+    font-size: 2em
+    cursor: pointer

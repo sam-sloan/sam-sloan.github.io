@@ -7,7 +7,7 @@ layout: default
 </div>
 
 <div class="about">
-	<p><span class = "green-para">We’re Albion.</span></p>
+	<h1 class = "green-para">We’re Albion.</h2>
 
 	<p>We create beautiful digital products out of <a href="0">Hamilton.</a></p>
 
@@ -16,16 +16,19 @@ layout: default
 	<p><span class = "green-para">But enough about us, let’s talk about you.</span> We’re dying to hear about your project.</p>
 </div>
 
-<section class="form">
+<section class="form" action="https://formspree.io/samforderer@icloud.com" method="POST">
 	<form>
-	Your NAME:<br>
-	<input type="text" name="name">
-	<br><br>
-	Email:<br>
-	<input type="text" name="email"><br><br>
-	your project:<br>
-	<input type="text" name="project" id="project">
-	<input type="submit" value="SUBMIT" id="submit">
-	</form>
 
+	<label for="name">Your Name:<label>
+	<input type="text" name="name" id="name" placeholder="John Doe" min="3" maxlength="15">
+
+	<label for="email">Email:</label>
+	<input type="email" title="please provide your email" name="email" placeholder="johndoe@example.com" x-moz-errormessage="This is not a valid e-mail" id="email">
+
+	<label for="project">Your project:<label>
+	<textarea name="project" id="project" rows="15" placeholder="Tell us a little bit about your project....."></textarea>
+
+	<input type="submit" value="SUBMIT" id="submit">
+
+	</form>
 </section>
