@@ -39,3 +39,13 @@ img {
 figure > img {
     display: block;
 }
+
+
+// Some Mixins
+
+@mixin text-form-border($linecolor) {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: thin solid $linecolor;
+}

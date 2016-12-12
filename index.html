@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class = "title">
-	<img src = "../img/header-logo.svg">
+	{% include headerlogo.html %}
 </div>
 
 <div class="about">
@@ -16,17 +16,17 @@ layout: default
 	<p><span class = "green-para">But enough about us, let’s talk about you.</span> We’re dying to hear about your project.</p>
 </div>
 
-<section class="form" action="https://formspree.io/samforderer@icloud.com" method="POST">
-	<form>
+<section class="form">
+	<form action="https://formspree.io/samforderer@icloud.com" method="POST">
 
-	<label for="name">Your Name:<label>
+	<label for="name">Your Name:</label>
 	<input type="text" name="name" id="name" placeholder="John Doe" min="3" maxlength="15">
 
 	<label for="email">Email:</label>
-	<input type="email" title="please provide your email" name="email" placeholder="johndoe@example.com" x-moz-errormessage="This is not a valid e-mail" id="email">
+	<input type="email" title="please provide your email" name="email" placeholder="johndoe@example.com" id="email">
 
 	<label for="project">Your project:<label>
-	<textarea name="project" id="project" rows="15" placeholder="Tell us a little bit about your project....."></textarea>
+	<textarea name="project" id="project" rows="5" placeholder="Tell us a little bit about your project....."></textarea>
 
 	<input type="submit" value="SUBMIT" id="submit">
 
