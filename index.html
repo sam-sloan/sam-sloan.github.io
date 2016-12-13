@@ -1,34 +1,11 @@
 ---
 layout: default
+description: this is the homepage of the website. It is divided into small modules of HTML stored in the includes folder.
 ---
 
 <div class = "title">
-	{% include headerlogo.html %}
-</div>
+  {% include headerlogo.html %}</div>
 
-<div class="about">
-	<h1 class = "green-para">We’re Albion.</h2>
+{% include about.html %}
 
-	<p>We create beautiful digital products out of <a href="0">Hamilton.</a></p>
-
-	<p>We’re a small team of designers and developers with super powers and great taste. Albion is the name of the neighbourhood where we grew up.</p>
-
-	<p><span class = "green-para">But enough about us, let’s talk about you.</span> We’re dying to hear about your project.</p>
-</div>
-
-<section class="form">
-	<form action="https://formspree.io/samforderer@icloud.com" method="POST">
-
-	<label for="name">Your Name:</label>
-	<input type="text" name="name" id="name" placeholder="John Doe" min="3" maxlength="15">
-
-	<label for="email">Email:</label>
-	<input type="email" title="please provide your email" name="email" placeholder="johndoe@example.com" id="email">
-
-	<label for="project">Your project:<label>
-	<textarea name="project" id="project" rows="5" placeholder="Tell us a little bit about your project....."></textarea>
-
-	<input type="submit" value="SUBMIT" id="submit">
-
-	</form>
-</section>
+{% include form.html %}
