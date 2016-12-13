@@ -17,38 +17,37 @@
 .title
   @include outer-container()
   margin-top: 50px
-  height: 455px
+  height: 28.4em
   background: $backgroundGrey
   box-shadow: 0 0 60px -10px
   border-radius: $bRadius
   display: flex
   justify-content: center
-  padding: 0, 100px
+  padding: 0, $topPadding
 
   svg
-    max-width: 600px
-    width: 100%
+    width: 37.5em
 
 
 // The about card
 .about
   @include outer-container()
-  height: 100vH
+  height: auto
   min-height: 600px
-  display: flex
-  flex-direction: column
-  justify-content: space-between
   background: $backgroundGrey
   box-shadow: 0 0 40px -10px #000
   border-radius: $bRadius
-  padding: 100px 100px 50px 100px
-  margin-top: 40px
+  padding: $topPadding
+  margin-top: $marginBetween
 
   p
     font-size: 1.8em
     font-family: 'roboto'
     color: $paragraphGrey
     line-height: 1.6
+    margin-bottom: 10vH
+    &:last-of-type
+      margin-bottom: 0vH
 
     a
       color: $paragraphGrey
@@ -60,6 +59,7 @@
   .green-para
     color: $albionTeal
     font-family: 'roboto'
+    margin-bottom: 10vH
 
 
 // The contact form div
