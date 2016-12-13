@@ -4,15 +4,6 @@
 // components can have multiple selectors, selectors are separated by one space
 
 
-// This is a div that covers entire page and saturates the
-//background image with a transparent grey color.
-.transparency
-  width: 100%
-  height: 100%
-  background: rgba(20,20,20,0.85)
-  padding-top: 50px
-
-
 // The title card under header with large logo
 .title
   @include outer-container()
@@ -27,6 +18,8 @@
 
   svg
     width: 37.5em
+    @media (screen and max-width: $large)
+      width: 90%
 
 
 // The about card
@@ -53,6 +46,9 @@
     margin-bottom: 10vH
     &:last-of-type
       margin-bottom: 0vH
+    @media (screen and max-width: $large)
+      line-height: 1.3
+      margin-bottom: 8vH
 
     a
       color: $paragraphGrey
@@ -76,7 +72,7 @@
   align-items: center
 
 #form-section
-  height: 100vH
+  height: 100vh
   max-height: 720px
   background: -webkit-linear-gradient(rgba(45,45,45,0.22),rgba(23,190,155,0.1))
   @include outer-container()
@@ -151,6 +147,7 @@
       letter-spacing: 4px
       cursor: pointer
       font-family: multicore
+      margin-bottom: 100px
       transition: 0.3s
       outline: none
       position: relative
