@@ -65,10 +65,10 @@ function formCollapse() {
   var tl = new TimelineMax();
 
   tl.to([textFields, textArea, labels], 0.1, { autoAlpha: 0})
-    .to('#submit', 0.1, {width:'50px',color:'#00AF8A',innerHTML:'!', x:10, ease:Elastic.easeOut})
+    .to('#submit', 0.1, {width:'50px',color:'#00AF8A',innerHTML:'!', ease:Elastic.easeOut})
     .to('#submit', 0.5, {bottom:formPos})
-    .to('#form-section', 0.07, {backgroundColor:'#00AF8A',height:formHeight})
-    .to('#submit', 0.2, {width:'620px', ease:Strong.easeOut})
+    .to('#form-section', 0.07, {backgroundColor:'rgba(23,190,155,0.5)',height:formHeight})
+    .to('#submit', 0.2, {width:'100%', ease:Elastic.easeOut})
     .to('#submit', 0.2, {innerHTML:'We will be in touch!', color:'#ffffff'})
 
 }
@@ -77,6 +77,3 @@ function formCollapse() {
 TweenMax.to('.asterisk', 1, {rotation:360,transformOrigin:'50% 50%',repeat:-1,repeatDelay:3});
 
 // ANIMATIONS
-
-formCollapse();
-alert(formHeight);
