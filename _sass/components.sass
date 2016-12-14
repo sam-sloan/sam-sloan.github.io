@@ -1,23 +1,22 @@
 // Styles for Major Components
-// Use a comment directly above each component with description
-// Use two spaces between each component
-// components can have multiple selectors, selectors are separated by one space
-
 
 // The title card under header with large logo
 .title
   @include outer-container()
-  margin-top: 50px
-  height: 28.4em
   background: $backgroundGrey
-  box-shadow: 0 0 60px -10px
+  box-shadow: $theShadows
   border-radius: $bRadius
   display: flex
   justify-content: center
   padding: 0, $topPadding
+  padding-top: 5vh
+  padding-bottom: 5vH
 
   svg
-    width: 37.5em
+    max-width: 37.5em
+    height: auto
+    width: 100%
+    height: 100%
     @media (screen and max-width: $large)
       width: 90%
 
@@ -25,10 +24,9 @@
 // The about card
 .about
   @include outer-container()
-  height: auto
-  min-height: 600px
+  height: 100vH
   background: $backgroundGrey
-  box-shadow: 0 0 40px -10px #000
+  box-shadow: $theShadows
   border-radius: $bRadius
   padding: $topPadding
   margin-top: $marginBetween
@@ -36,19 +34,17 @@
     padding-left: 5%
     padding-right: 5%
 
-
-
+  // the body type in the about section
   p
-    font-size: 1.8em
+    font-size: 120%
     font-family: 'roboto'
     color: $paragraphGrey
-    line-height: 1.6
-    margin-bottom: 10vH
+    line-height: 1.8em
+    margin-bottom: 0
     &:last-of-type
       margin-bottom: 0vH
     @media (screen and max-width: $large)
       line-height: 1.3
-      margin-bottom: 8vH
 
     a
       color: $paragraphGrey
@@ -60,7 +56,7 @@
   .green-para
     color: $albionTeal
     font-family: 'roboto'
-    margin-bottom: 10vH
+    margin-bottom: 0
 
 
 // The contact form div
@@ -72,20 +68,19 @@
   align-items: center
 
 #form-section
-  height: 100vh
-  max-height: 720px
-  background: -webkit-linear-gradient(rgba(45,45,45,0.22),rgba(23,190,155,0.1))
   @include outer-container()
-  box-shadow: 0 0 40px -10px black
-  border-radius: $bRadius
+  height: 100%
   padding-top: 100px
-  padding-left: $topPadding
-  margin-top: 40px
-  margin-bottom: 60px
+  padding-left: $sidePadding
+  padding-right: $sidePadding
+  margin-bottom: $marginBetween
+  background: -webkit-linear-gradient(rgba(45,45,45,0.22),rgba(23,190,155,0.1))
+  box-shadow: $theShadows
+  border-radius: $bRadius
   color: $paragraphGrey
-  transition: 1s
   font-family: multicore
   letter-spacing: 4px
+  transition: 1s
 
   form
     max-width: 620px

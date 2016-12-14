@@ -1,15 +1,10 @@
 // AJAX REQUEST TO SUBMIT TO FORMSPREE W ANIMATION
 if (document.forms[0] && window.FormData) {
 
-  // create messages for various responses
-  var message = {
-    loading: '<h1>' + 'loading' + '</h1>',
-    success: '<h1 id="submission-message">' + 'Thank you!' + '</h1>',
-    failure: 'If you do not have anything nice to say do not say anything!'
-  };
-
+  // get the form and stick it in that variable
   var form = document.forms[0];
 
+  // get the submit button for form.
   var button = document.getElementById('submit');
 
   // create AJAX request
