@@ -58,18 +58,24 @@ function formCollapse() {
   // This is the position of the center of the form div for the button to animate to.
   var formPos = formHeight + (formHeight / 2) - buttonHeight - 100;
 
-  var tl = new TimelineMax();
+  var tl = new TimelineMax({repeat:5});
 
   tl.to([textFields, textArea, labels], 0.1, { autoAlpha: 0})
-    .to('#submit', 0.1, {width:'50px',color:'#00AF8A',innerHTML:'!', ease:Elastic.easeOut})
+    .to('#submit', 0.1, {width:'50px',color:'#00AF8A',innerHTML:'!'})
     .to('#submit', 0.5, {bottom:formPos})
     .to(submissionMessage, 0.07, {backgroundColor:'rgba(23,190,155,0.5)',height:formHeight})
-    .to('#submit', 0.2, {width:'100%', ease:Elastic.easeOut})
+    .to('#submit', 0.1, {width:'100%', ease: Strong.easeOut})
     .to('#submit', 0.2, {innerHTML:'We will be in touch!', color:'#ffffff'})
-    .to(submissionMessage, 4, {backgroundColor:'rgba(0,0,0,0)'}, '+=5')
+    .to(submissionMessage, 1, {backgroundColor:'rgba(0,0,0,0)'}, '+=5')
 }
 
 //animation for the spinning asterisk in the title logo
 TweenMax.to('.asterisk', 1, {rotation:360,transformOrigin:'50% 50%',repeat:-1,repeatDelay:3});
 
 // ANIMATIONS
+
+var myButton = document.querySelector('#buttonr');
+
+myButton.addEventListener('click', function(){
+  window.scrollTo( 0, 0 );
+});
