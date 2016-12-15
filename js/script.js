@@ -42,8 +42,6 @@ if (document.forms[0] && window.FormData) {
   });
 }
 
-
-
 // ANIMATIONS
 
 function formCollapse() {
@@ -55,20 +53,23 @@ function formCollapse() {
   var submissionMessage = document.getElementById('form-section');
 
   var formHeight = submissionMessage.offsetHeight / 2;
-  var formPos = formHeight + 85;
+  var buttonHeight = document.querySelector('#submit').offsetHeight / 2;
+
+  // Button
+  var formPos = formHeight + (formHeight / 2) - buttonHeight;
 
   var tl = new TimelineMax();
 
   tl.to([textFields, textArea, labels], 0.1, { autoAlpha: 0})
     .to('#submit', 0.1, {width:'50px',color:'#00AF8A',innerHTML:'!', ease:Elastic.easeOut})
     .to('#submit', 0.5, {bottom:formPos})
-    .to('#form-section', 0.07, {backgroundColor:'rgba(23,190,155,0.5)',height:formHeight})
+    .to(submissionMessage, 0.07, {backgroundColor:'rgba(23,190,155,0.5)',height:formHeight})
     .to('#submit', 0.2, {width:'100%', ease:Elastic.easeOut})
     .to('#submit', 0.2, {innerHTML:'We will be in touch!', color:'#ffffff'})
-
 }
 
 //animation for the spinning asterisk in the title logo
 TweenMax.to('.asterisk', 1, {rotation:360,transformOrigin:'50% 50%',repeat:-1,repeatDelay:3});
 
 // ANIMATIONS
+formCollapse()
