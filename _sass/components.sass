@@ -41,7 +41,7 @@
   h1
     color: $albionTeal
     font-family: 'roboto'
-    margin-bottom: $topPadding
+    margin-bottom: $topPadding / 2
     font-size: 2.5em
 
   // the body type in the about section
@@ -49,8 +49,8 @@
     font-size: 1.8em
     font-family: 'roboto'
     color: $paragraphGrey
-    line-height: 1.8em
-    margin-bottom: $topPadding
+    line-height: 1.9em
+    margin-bottom: $topPadding /2
     &:last-of-type
       margin-bottom: 0vH
     @media (screen and max-width: $large)
@@ -96,14 +96,14 @@
     padding-right: 5%
 
   form
-    max-width: 620px
     width: 100%
     font-family: multicore
     letter-spacing: 4px
 
-    label
-      padding-bottom: 50px
+    .label
       cursor: pointer
+      margin-bottom: 100px
+      padding-bottom: 100px
 
     // styling of basic text boxes
     input
@@ -115,6 +115,7 @@
       @include text-form-border(rgba(255,255,255,0.1))
 
       margin: 20px 0px $topPadding 0px
+      padding: 0px
       display: inline-block
       outline: none
       border-radius: 0
@@ -134,8 +135,8 @@
       @include text-form-border(rgba(255,255,255,0.1))
       display: block
       width: 100%
-      max-width: 620px
-      margin: 20px 0px 30px 0px
+      margin: 25px 0px 30px 0px
+      padding: 0px
       outline: none
       font-size: 1.2em
       font-family: 'roboto'
